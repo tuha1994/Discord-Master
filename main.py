@@ -24,10 +24,10 @@ chromium_driver_path = './chromedriver/chromedriver.exe'
 service = Service(executable_path=chromium_driver_path)
 options = webdriver.ChromeOptions()
 options.binary_location = chromium_binary_path
-#options.add_argument('--headless')
+options.add_argument('--headless')
 options.add_argument('--disable-features=AutoUpdate')
 options.add_argument('--no-sandbox')
-user_data_dir = 'C:\\Users\\tuha\\AppData\\Local\\Chromium\\User Data\\'
+user_data_dir = 'C:\\Users\\"username"\\AppData\\Local\\Chromium\\User Data\\'
 options.add_argument(f'--user-data-dir={user_data_dir}')
 driver = webdriver.Chrome(service=service, options=options)
 driver.get(url1)
